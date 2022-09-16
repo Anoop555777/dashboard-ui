@@ -46,7 +46,11 @@ body {
 .header {
   height: 7rem;
   border-bottom: var(--line);
-  background-color: #fff; }
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.2rem; }
 
 .content {
   display: flex; }
@@ -58,3 +62,80 @@ body {
 .hotel-view {
   background-color: #fff;
   flex-grow: 1; }
+
+.logo {
+  height: 3.25rem; }
+
+.search {
+  flex: 0 0 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    display: inline-block;
+    border: none;
+    background-color: var(--color-grey-light-4);
+    font-family: inherit;
+    font-size: 1.6rem;
+    border-radius: 11px;
+    padding: 0.4rem 1.2rem;
+    width: 90%;
+    transition: all 0.3s;
+    margin-right: -3rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%; }
+  .search__input:focus + .search__button .search__icon {
+    color: #111; }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-4);
+    transition: all 0.2s; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(0.2rem); }
+  .search__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    border: none;
+    background: transparent;
+    color: var(--color-grey-light-1); }
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; }
+  .user-nav__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+  .user-nav__icon {
+    height: 2.4rem;
+    width: 2.4rem; }
+  .user-nav__notification {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-dark);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -0.6rem;
+    right: -0.4rem; }
+  .user-nav__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; }
+    .user-nav__user-photo {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%; }
+    .user-nav__user-name {
+      display: inline-block;
+      font-size: 1.5rem; }
