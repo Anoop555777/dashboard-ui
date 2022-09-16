@@ -32,5 +32,24 @@
   background-color: #fff;
   flex-grow: 1;
   //test
-  height: 80rem;
+  //height: 80rem;
+}
+
+.detail {
+  display: flex;
+  padding: 4.8rem;
+  background-color: var(--color-grey-light-1);
+
+  .description {
+    flex: 0 0 60%;
+    font-size: 1.4rem;
+    margin-right: 3.2rem;
+    box-shadow: var(--shadow-light);
+    padding: 3.4rem;
+  }
+
+  .user-reviews {
+    flex: 1;
+    background-color: green;
+  }
 }
