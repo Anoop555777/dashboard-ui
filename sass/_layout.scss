@@ -50,6 +50,65 @@
 
   .user-reviews {
     flex: 1;
-    background-color: green;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem 0;
+}
+
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  box-shadow: var(--shadow-dark);
+  text-transform: uppercase;
+  position: relative;
+  padding: 2rem 7.5rem;
+  overflow: hidden;
+
+  & > * {
+    transition: all 0.5s ease;
+  }
+
+  &__visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__invisible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: -100%;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:hover &__visible {
+    transform: translateY(5rem);
   }
 }
